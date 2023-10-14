@@ -67,18 +67,20 @@ Foam::activationModels::liquidSuperheatingThreshold::~liquidSuperheatingThreshol
 bool Foam::activationModels::liquidSuperheatingThreshold::
 isActive(const vector& location) const
 {
+    // get the primary phase's volume fraction field
     const volScalarField& alpha
     (
         mesh_.lookupObject<volScalarField>("alpha." + phaseName_)
     );
-
+    
+    // get the temperature field
     const volScalarField& T
     (
         mesh_.lookupObject<volScalarField>("T")
     );
 
     label cellId(-1);
-
+    
     cellId = mesh_.findCell(location);
 
     scalar alphaValue(0);
@@ -87,6 +89,7 @@ isActive(const vector& location) const
     autoPtr<interpolation<scalar> > interpT =
         interpolation<scalar>::New("cellPointFace", T);
 
+    // if location is found then interpolate Temp
     if(cellId > -1)
     {
         alphaValue = alpha[cellId];

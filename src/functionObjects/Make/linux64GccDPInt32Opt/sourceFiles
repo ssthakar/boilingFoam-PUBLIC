@@ -1,0 +1,14 @@
+SOURCE = \
+bubbleGenerator/bubbleGenerator.C \
+bubbleGenerator/activationModels/activationModel/activationModel.C \
+bubbleGenerator/activationModels/liquidSuperheatingThreshold/liquidSuperheatingThreshold.C \
+bubbleGenerator/nucleationModels/nucleationModel/nucleationModel.C \
+bubbleGenerator/nucleationModels/fixedRadius/fixedRadius.C \
+bubbleGenerator/locationModels/locationModel/locationModel.C \
+bubbleGenerator/locationModels/fixedSites/fixedSites.C \
+bubbleGenerator/locationModels/heatWallSites/heatWallSites.C \
+bubbleTracker/bubbleTracker.C \
+bubbleDestroyer/bubbleDestroyer.C \
+postBoiling/postBoiling.C \
+
+# sources

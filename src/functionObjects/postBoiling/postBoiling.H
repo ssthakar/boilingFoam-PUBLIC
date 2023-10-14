@@ -61,7 +61,7 @@ SourceFiles
 #define postBoiling_H
 
 #include "fvMeshFunctionObject.H"
-
+#include "volFieldsFwd.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
